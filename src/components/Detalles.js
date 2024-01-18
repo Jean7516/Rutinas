@@ -4,19 +4,17 @@ import { Typography, Stack, Button } from '@mui/material';
 import BodyPartImage from '../assets/icons/body-part.png';
 import TargetImage from '../assets/icons/target.png';
 import EquipmentImage from '../assets/icons/equipment.png';
-import translate from "translate";
 
 
-
-
-translate.engine = "deepl";
-translate.key = '28110751-c666-4690-9cae-91d092d0d37d:fx';
 
 
 const Detalles = ({ exerciseDetail }) => {
 
     const { bodyPart, gifUrl, name, target, equipment,instructions } = exerciseDetail;
- 
+
+   
+    console.log(JSON.stringify(instructions))
+
     const extraDetail = [
       {
         icon: BodyPartImage,
@@ -32,6 +30,8 @@ const Detalles = ({ exerciseDetail }) => {
         name: equipment,
       },
     ];
+
+  
 
     return (
       <Stack gap="60px" sx={{ flexDirection: { lg: 'row' }, p: '20px', alignItems: 'center' }}>
